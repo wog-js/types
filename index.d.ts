@@ -9,3 +9,9 @@ export namespace wog {
 	export * from './lib/storage'
 
 }
+
+declare global {
+
+	export * from './lib/globals'
+
+}
