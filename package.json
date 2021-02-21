@@ -18,9 +18,5 @@
         "eslint": "^7.20.0",
         "typescript": "^4.1.5"
     },
-    "types": "./index.d.ts",
-    "files": [
-        "./index.d.ts",
-        "./lib/*.d.ts"
-    ]
+    "types": "./index.d.ts"
 }
