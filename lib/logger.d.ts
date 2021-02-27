@@ -1,4 +1,4 @@
-import { Logger as WinstonLogger } from '../node_modules/winston/index'
+import { Logger as WinstonLogger } from 'winston'
 
 export interface Logger extends WinstonLogger {
 
