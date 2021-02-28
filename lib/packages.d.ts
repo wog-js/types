@@ -5,8 +5,9 @@ export interface Package {
 	id: string
 	type: string
 	version: string
-	description: string,
+	description: string
 	displayName: string
+	main: string
 
 }
 
@@ -14,7 +15,6 @@ export const VALID_TYPES: string[]
 
 export interface PackageRegistry {
 
-	_wogVersion: number
 	_logger: Logger
 
 	_rootDirectory: string

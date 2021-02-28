@@ -1,6 +1,10 @@
 import { RedisClient } from 'redis'
+import { Logger } from './logger';
 
 interface RedisManager {
+
+	_logger: Logger
+	_config: object
 
 	/**
 	 * Indicates whether a connection is currently established.
