@@ -26,7 +26,7 @@ export interface DatabaseManager {
 	 * @param params When the SQL statement contains placeholders, you can pass them in here.
 	 *               They will be bound to the statement before it is executed.
 	 */
-	run(sql: string, params: any[]): Promise<void>
+	run(sql: string, params?: any[]): Promise<void>
 
 	/**
 	 * Runs the SQL query with the specified parameters and calls the callback afterwards. It does not retrieve any result data.
@@ -37,7 +37,7 @@ export interface DatabaseManager {
 	 * @param params When the SQL statement contains placeholders, you can pass them in here.
 	 *               They will be bound to the statement before it is executed.
 	 */
-	get(sql: string, params: any[]): Promise<any>
+	get(sql: string, params?: any[]): Promise<any>
 
 	/**
 	 * Runs the SQL query with the specified parameters and calls the callback afterwards. It does not retrieve any result data.
@@ -48,5 +48,5 @@ export interface DatabaseManager {
 	 * @param params When the SQL statement contains placeholders, you can pass them in here.
 	 *               They will be bound to the statement before it is executed.
 	 */
-	all(sql: string, params: any[]): Promise<any[]>
+	all(sql: string, params?: any[]): Promise<any[]>
 }
