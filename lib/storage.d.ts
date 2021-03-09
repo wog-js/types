@@ -1,3 +1,5 @@
+import { Logger } from './logger';
+
 export enum FileType {
 	FILE = "file",
 	DIRECTORY = "directory",
@@ -8,6 +10,8 @@ export enum FileType {
  * The Storage class is a small utility for working with files within the `storage/` directory.
  */
 export interface Storage {
+
+	_logger: Logger
 
 	/** The absolute path to the storage directory. */
 	_root: string
