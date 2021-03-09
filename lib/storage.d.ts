@@ -1,3 +1,9 @@
+export enum FileType {
+	FILE = "file",
+	DIRECTORY = "directory",
+	UNKNOWN = "unknown"
+}
+
 /**
  * The Storage class is a small utility for working with files within the `storage/` directory.
  */
@@ -13,6 +19,20 @@ export interface Storage {
 	 * @returns The absolute path.
 	 */
 	getPath(name?: string): string
+
+	/**
+	 * Tests whether the given path exists in the storage.
+	 *
+	 * @param name The path to test.
+	 */
+	exists(name: string): Promise<boolean>
+
+	/**
+	 * Tests whether the given path points to a file or directory.
+	 * @param name The path to test.
+	 * @param type The type to test.
+	 */
+	isOfType(name: string, type: FileType): Promise<boolean>
 
 	/**
 	 * Create a new storage directory.
